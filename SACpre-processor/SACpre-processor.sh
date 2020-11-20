@@ -13,10 +13,10 @@ version="v1.1"
 # parent folder of SAC files. ["./example_data/SAC_raw/"]
 raw_sac_folder="./example_data/SAC_raw/"
 
-# expansion of SAC files. ["",".SAC",".sac"]
+# extension of SAC files. ["",".SAC",".sac"]
 # used when SAC folder has non-SAC files, e.g., response files in the same folder. 
 # if not, set it empty. 
-sac_expansion=""
+sac_extension=""
 
 # output folder. ["./example_data/SAC_processed/"]
 # Warning: this folder will be removed if existing! 
@@ -60,7 +60,7 @@ rm -r $out_sac_folder
 fi
 
 mkdir $out_sac_folder
-cp $raw_sac_folder/*$sac_expansion $out_sac_folder/
+cp $raw_sac_folder/*$sac_extension $out_sac_folder/
 
 export SAC_DISPLAY_COPYRIGHT=0
 
