@@ -1,5 +1,5 @@
-Log file for SACpre-processor v1.0
-Time: Fri Nov 20 12:44:25 CST 2020
+Log file for SACpre-processor v1.2
+Time: Wed Nov 25 17:01:39 CST 2020
 raw sac folder: ./example_data/SAC_raw/
 output folder: ./example_data/SAC_processed/
 instrument response folder: ./example_data/RESPs/

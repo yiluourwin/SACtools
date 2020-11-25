@@ -6,7 +6,7 @@
 #
 # Author: Yi Luo
 # Built: 2020-11-20
-version="v1.1"
+version="v1.2"
 
 ## Settings -------------------------------
 
@@ -74,10 +74,11 @@ for file in $out_sac_folder/*;do
     trans_spell=""
     mul_spell=""
     
-    net=`saclst knetwk f $file 2>> $log_file| awk '{print $2}'` 
-    stnm=`saclst kstnm f $file | awk '{print $2}'`
-    khole=`saclst khole f $file | awk '{print $2}'`
-    kcmpnm=`saclst kcmpnm f $file | awk '{print $2}'`
+    lhinfo=(`saclst knetwk kstnm khole kcmpnm f $file 2>> $log_file`)
+    net=${lhinfo[1]}
+    stnm=${lhinfo[2]}
+    khole=${lhinfo[3]}
+    kcmpnm=${lhinfo[4]}
 
     if [ $input_type == "evalresp" ];then
         # RESP.<NET>.<STA>.<LOCID>.<CHN>
