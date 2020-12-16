@@ -19,7 +19,7 @@ output_folder="./example_data/SAC_archived"
 # tags, separated by space. [knetwk kstnm kcmpnm]
 tags="knetwk kstnm kcmpnm"
 
-# delimiter
+# delimiter. [".","_"]
 delimiter="."
 
 ## Main ------------------------------------------------------
