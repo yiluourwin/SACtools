@@ -6,7 +6,7 @@
 #
 # Author: Yi Luo
 # Built: 2020-11-20
-version="v1.2"
+version="v1.3"
 
 ## Settings -------------------------------
 
@@ -21,6 +21,9 @@ sac_extension=""
 # output folder. ["./example_data/SAC_processed/"]
 # Warning: this folder will be removed if existing! 
 out_sac_folder="./example_data/SAC_processed/"
+
+# process functions you need. ["rmean;rtr;taper"]
+process_func="rmean;rtr;taper"
 
 # parent folder of instrument response files. ["./example_data/RESPs/"]
 # will not be used if input_type isn't evalresp or polezero
@@ -103,7 +106,7 @@ for file in $out_sac_folder/*;do
 
     sac <<EOF 2>> $log_file >> $log_file_temp
 r $file
-rmean;rtr;taper
+$process_func
 trans from $input_type $trans_spell to $output_type freq ${frequency_band[0]} ${frequency_band[1]} ${frequency_band[2]} ${frequency_band[3]}
 $mul_spell
 w over
