@@ -1,0 +1,12 @@
+1. 
+SACpre-processor.sh
+该脚本以BASH调用SAC(IRIS)软件，进行sac文件的一些基本处理工作（去仪器响应等）。脚本提供了多种参数设定，并附详细注释。该脚本适用于对单个文件夹中多个sac文件的处理。可参考日志文件检查处理细节。
+使用：
+bash SACpre-processor.sh
+
+2. 
+func_sacpp
+如对复杂文件结构进行处理，可在脚本中调用该函数。默认状况下输入两个变量，待处理文件夹、仪器响应函数文件夹。该函数直接对目标文件夹处理，因此注意预先拷贝，并检查输入路径。提供了两个简单脚本作举例。
+使用：
+source (PATH)/func_sacpp
+func_sacpp SAC_FOLDER RESPONSE_FOLDER
