@@ -1,12 +1,13 @@
-1. 
-SACpre-processor.sh
-该脚本以BASH调用SAC(IRIS)软件，进行sac文件的一些基本处理工作（去仪器响应等）。脚本提供了多种参数设定，并附详细注释。该脚本适用于对单个文件夹中多个sac文件的处理。可参考日志文件检查处理细节。
+SAC预处理工具    SACpre-processor
+作者：罗毅
+
+1. 脚本版    SACpre-processor.sh
+该脚本以BASH调用SAC(IRIS)软件，进行sac文件的一些基本处理工作（去仪器响应等）。脚本提供了多种参数设定，并附详细注释。该脚本适用于对单个文件夹中多个sac文件的处理。可参考日志文件（log_sacpp.txt）检查处理细节，错误提示被优先显示在日志文件的前面。
 使用：
 bash SACpre-processor.sh
 
-2. 
-func_sacpp
-如对复杂文件结构进行处理，可在脚本中调用该函数。默认状况下输入两个变量，待处理文件夹、仪器响应函数文件夹。其他参数可直接在函数中修改，也可参考$1和$2的定义方式，在脚本中灵活输入。该函数直接对目标文件夹处理，因此注意预先拷贝，并检查输入路径。提供了两个简单脚本作举例。sacpp_script_example_1.sh的功能与SACpre-processor.sh一致，而sacpp_script_example_2.sh则针对多个sac文件夹进行批量处理。输出日志文件分为详细记录（log_sacpp_full.txt）和错误记录（log_sacpp_error.txt）。由于日志为连续记录，每次运行会追加写入，需在脚本中添加删除命令。
+2. 函数版    func_sacpp
+如对复杂文件结构进行处理，可在脚本中调用该函数。默认状况下输入两个变量，待处理文件夹、仪器响应函数文件夹。其他参数可直接在函数中修改，也可参考$1和$2的定义方式，在脚本中灵活输入。该函数直接对目标文件夹处理，因此注意预先拷贝，并检查输入路径。提供了两个简单脚本作举例。sacpp_script_example_1.sh的功能与SACpre-processor.sh一致.而sacpp_script_example_2.sh则针对多个sac文件夹进行批量处理，并保持了原有的文件结构。输出日志文件分为详细记录（log_sacpp_full.txt）和错误记录（log_sacpp_error.txt）。由于日志为连续记录，每次运行会追加写入，需在脚本中添加删除命令。日志相比脚本版更加安静，去掉了参数设定信息。
 使用：在脚本中添加如下行，并自定义路径
 rm ./log_sacpp_*.txt
 source $PATH/func_sacpp

@@ -27,6 +27,7 @@ rm -r $out_sac_folder
 fi
 
 mkdir $out_sac_folder
+echo "Copying $raw_sac_folder/* to $out_sac_folder/"
 cp $raw_sac_folder/* $out_sac_folder/
 
 # ----
@@ -36,3 +37,5 @@ func_sacpp $out_sac_folder $response_folder
 
 # If you do not want a log
 # rm ./log_sacpp_*.txt
+
+echo "Done"

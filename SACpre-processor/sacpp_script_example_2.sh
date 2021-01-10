@@ -27,6 +27,7 @@ rm -r $out_sac_folder
 fi
 
 mkdir $out_sac_folder
+echo "Copying $raw_sac_folder/* to $out_sac_folder/"
 cp -r $raw_sac_folder $out_sac_folder/
 
 # ----
