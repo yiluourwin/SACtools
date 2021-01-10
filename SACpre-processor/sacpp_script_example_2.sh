@@ -20,7 +20,7 @@ response_folder="./example_data_3/RESPs/"
 
 ## Main ----------------------
 
-rm ./log_sacpp.txt
+rm ./log_sacpp_*.txt
 
 if [ -d $out_sac_folder ];then
 rm -r $out_sac_folder
@@ -37,4 +37,4 @@ done
 # ----
 
 # If you do not want a log
-# rm ./log_sacpp.txt
+# rm ./log_sacpp_*.txt

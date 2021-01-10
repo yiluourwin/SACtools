@@ -20,7 +20,7 @@ response_folder="./example_data_2/RESPs/"
 
 ## Main ----------------------
 
-rm ./log_sacpp.txt
+rm ./log_sacpp_*.txt
 
 if [ -d $out_sac_folder ];then
 rm -r $out_sac_folder
@@ -35,4 +35,4 @@ func_sacpp $out_sac_folder $response_folder
 # ----
 
 # If you do not want a log
-# rm ./log_sacpp.txt
+# rm ./log_sacpp_*.txt
