@@ -6,7 +6,7 @@
 #
 # Author: Yi Luo
 # Built: 2020-11-20
-version="v1.3"
+version="v1.4"
 
 ## Settings -------------------------------
 
@@ -63,6 +63,7 @@ rm -r $out_sac_folder
 fi
 
 mkdir $out_sac_folder
+echo "Copying $raw_sac_folder/*$sac_extension to $out_sac_folder/"
 cp $raw_sac_folder/*$sac_extension $out_sac_folder/
 
 export SAC_DISPLAY_COPYRIGHT=0

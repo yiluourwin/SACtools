@@ -5,7 +5,6 @@
 #
 # Author: Yi Luo
 # Built: 2021-01-07
-version="v2.0"
 
 source ./func_sacpp
 

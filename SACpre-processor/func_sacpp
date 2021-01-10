@@ -10,7 +10,7 @@
 
 function func_sacpp(){
 
-version="v2.0"
+version="v2.1"
 
 ## Settings -------------------------------
 
@@ -44,23 +44,24 @@ output_type="none"
 frequency_band=(0.005 0.01 15 20)
 
 # log file
-log_file="./log_sacpp.txt"
+log_file="./log_sacpp_error.txt"
+log_file_temp="./log_sacpp_full.txt"
 
 ## Main ------------------------------------------------------
 ##############################################################
-echo "Log file for SACpre-processor" $version | tee -a $log_file
-Date=`date`
-echo "Time:" $Date | tee -a $log_file
-echo "raw sac folder:" $raw_sac_folder | tee -a $log_file
+#echo "Log file for SACpre-processor" $version | tee -a $log_file
+#Date=`date`
+#echo "Time:" $Date | tee -a $log_file
+#echo "raw sac folder:" $raw_sac_folder | tee -a $log_file
 #echo "output folder:" $out_sac_folder | tee -a $log_file
-echo "instrument response folder:" $response_folder | tee -a $log_file
-echo "input type:" $input_type | tee -a $log_file
-echo "output type:" $output_type | tee -a $log_file
-echo "frequency band" ${frequency_band[0]} ${frequency_band[1]} ${frequency_band[2]} ${frequency_band[3]} | tee -a $log_file
-echo "  " >> $log_file
-echo "----Error log------------------------------" >> $log_file
+#echo "instrument response folder:" $response_folder | tee -a $log_file
+#echo "input type:" $input_type | tee -a $log_file
+#echo "output type:" $output_type | tee -a $log_file
+#echo "frequency band" ${frequency_band[0]} ${frequency_band[1]} ${frequency_band[2]} ${frequency_band[3]} | tee -a $log_file
+#echo "  " >> $log_file
+#echo "----Error log------------------------------" >> $log_file
 
-log_file_temp="./log_sacpp.temp.txt"
+#log_file_temp="./log_sacpp.temp.txt"
 
 #if [ -d $out_sac_folder ];then
 #rm -r $out_sac_folder
@@ -121,10 +122,10 @@ EOF
 
 done
 
-echo "  " >> $log_file
-echo "----Full log-------------------------------" >> $log_file
-cat $log_file_temp >> $log_file
-rm $log_file_temp
+#echo "  " >> $log_file
+#echo "----Full log-------------------------------" >> $log_file
+#cat $log_file_temp >> $log_file
+#rm $log_file_temp
 
 # Main end ---------------------------------------------
 }

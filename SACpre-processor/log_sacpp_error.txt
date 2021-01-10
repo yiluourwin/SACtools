@@ -1,0 +1,3 @@
+WARNING: evresp_; no files match './RESP.MY.KOM.BHZ'
+[MY.KOM.*.BHZ] WARNING: no response found for NET=MY,STA=KOM,LOCID=*,CHAN=BHZ,DATE=2020,036,18:14:17.669
+saclst: Error in reading SAC header ./example_data_3/SAC_processed//sac2/wrong_file_test.txt

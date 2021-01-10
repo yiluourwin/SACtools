@@ -1,0 +1,39 @@
+   
+> SAC: ./example_data_3/SAC_processed//sac1/GE.UGM..BHZ_2020-08-21T04_11_40.375_2020-08-21T04_22_40.375.sac
+Using response from user-specified file: (./example_data_3/RESPs//RESP.GE.UGM..BHZ).
+ Extracting evresp response for UGM, BHZ...
+ Station (UGM), Channel (BHZ)
+   
+> SAC: ./example_data_3/SAC_processed//sac1/II.COCO.00.BHZ_2020-08-21T04_13_45.800_2020-08-21T04_24_45.800.sac
+Using response from user-specified file: (./example_data_3/RESPs//RESP.II.COCO.00.BHZ).
+ Extracting evresp response for COCO, BHZ...
+ Station (COCO), Channel (BHZ)
+   
+> SAC: ./example_data_3/SAC_processed//sac1/II.COCO.10.BHZ_2020-02-05T18_15_06.239_2020-02-05T18_26_06.239.sac
+Using response from user-specified file: (./example_data_3/RESPs//RESP.II.COCO.10.BHZ).
+ Extracting evresp response for COCO, BHZ...
+ Station (COCO), Channel (BHZ)
+   
+> SAC: ./example_data_3/SAC_processed//sac2/MY.KKM..BHZ_2020-07-06T22_56_35.163_2020-07-06T23_07_35.163.sac
+Using response from user-specified file: (./example_data_3/RESPs//RESP.MY.KKM..BHZ).
+ Extracting evresp response for KKM, BHZ...
+ Station (KKM), Channel (BHZ)
+   
+> SAC: ./example_data_3/SAC_processed//sac2/MY.KOM..BHZ_2020-02-05T18_14_17.631_2020-02-05T18_25_17.631.sac
+User-specified file: (./example_data_3/RESPs//RESP.MY.KOM..BHZ) not found.
+Looking in current directory for matching file...
+ Extracting evresp response for KOM, BHZ...
+ No transfer function applied! 
+ ERROR 2118: No transfer function applied.
+   
+> SAC: ./example_data_3/SAC_processed//sac2/MY.KSM..BHZ_2020-08-21T04_12_03.754_2020-08-21T04_23_03.754.sac
+Using response from user-specified file: (./example_data_3/RESPs//RESP.MY.KSM..BHZ).
+ Extracting evresp response for KSM, BHZ...
+ Station (KSM), Channel (BHZ)
+   
+> SAC: ./example_data_3/SAC_processed//sac2/wrong_file_test.txt
+ ERROR 1301: No data files read in.
+ ERROR 1301: No data files read in.
+ ERROR 1301: No data files read in.
+ ERROR 1301: No data files read in.
+ ERROR 1311: No list of filenames to write.
