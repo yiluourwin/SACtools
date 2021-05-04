@@ -43,13 +43,13 @@ mkdir $noarch_folder
 succ_count=0
 fail_count=0
 
-echo Copying SAC files...
-cp $sac_folder/* $noarch_folder
+#echo Copying SAC files...
+#cp $sac_folder/* $noarch_folder
 
 
 echo Dealing SAC files...
 
-for sac_file in $noarch_folder/*;do
+for sac_file in $sac_folder/*;do
     #echo '# ----------------------------' 
     #echo Dealing $sac_file
 
@@ -68,6 +68,7 @@ for sac_file in $noarch_folder/*;do
         echo ' Event lat & lon : ' ${lhinfo[1]%?} ${lhinfo[2]%?}
         echo ----
         fail_count=$[fail_count+1]
+        cp $sac_file $noarch_folder
         continue
     fi
     
@@ -78,7 +79,7 @@ for sac_file in $noarch_folder/*;do
     if [ ! -d $dest_dir ];then
         mkdir $dest_dir
     fi
-    mv $sac_file $dest_dir
+    cp $sac_file $dest_dir
     
     #echo ' Match!' $dest_dir
     succ_count=$[succ_count+1]
